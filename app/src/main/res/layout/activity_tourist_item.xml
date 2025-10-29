@@ -42,7 +42,8 @@
                 android:id="@+id/tourist_location"
                 android:textSize="14sp"
                 android:textColor="#B7192C"
-                android:layout_width="wrap_content"
+                android:drawableStart="@drawable/ic_location"
+                android:drawablePadding="6dp"                android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <TextView
@@ -53,6 +54,35 @@
                 android:ellipsize="end"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="6dp"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RatingBar
+                    android:id="@+id/tourist_rating"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:progressTint="#FFD700"
+                    android:rating="4.5"
+                    android:scaleX="0.9"
+                    android:scaleY="0.9" />
+
+                <TextView
+                    android:id="@+id/tourist_rating_value"
+                    android:text="4.5"
+                    android:textSize="12sp"
+                    android:textColor="#FFD700"
+                    android:layout_marginStart="6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
 
             <Button
                 android:id="@+id/btnDetail"

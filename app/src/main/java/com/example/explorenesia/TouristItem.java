@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
@@ -39,6 +40,8 @@ public class TouristItem extends RecyclerView.Adapter<TouristItem.ViewHolder> im
         holder.location.setText(tourist.getLocation());
         holder.desc.setText(tourist.getDesc());
         holder.pict.setImageResource(tourist.getPict());
+        holder.rating.setRating(tourist.getRating());
+        holder.rating_value.setText(String.valueOf(tourist.getRating()));
 
         holder.btn_detail.setOnClickListener(v -> {
             Intent intent = new Intent(context, DetailActivity.class);
@@ -47,7 +50,6 @@ public class TouristItem extends RecyclerView.Adapter<TouristItem.ViewHolder> im
             intent.putExtra("description", tourist.getDesc());
             intent.putExtra("pict", tourist.getPict());
             intent.putExtra("maps", tourist.getMaps());
-            //context.startActivity(intent);
             holder.itemView.getContext().startActivity(intent);
         });
     }
@@ -92,7 +94,8 @@ public class TouristItem extends RecyclerView.Adapter<TouristItem.ViewHolder> im
     };
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView name, location, desc;
+        TextView name, location, desc, rating_value;
+        RatingBar rating;
         ImageView pict;
         Button btn_detail, btn_map;
 
@@ -104,6 +107,8 @@ public class TouristItem extends RecyclerView.Adapter<TouristItem.ViewHolder> im
             pict = itemView.findViewById(R.id.tourist_pict);
             btn_detail = itemView.findViewById(R.id.btnDetail);
             btn_map = itemView.findViewById(R.id.btnMap);
+            rating = itemView.findViewById(R.id.tourist_rating);
+            rating_value = itemView.findViewById(R.id.tourist_rating_value);
         }
     }
 }
