@@ -5,8 +5,8 @@
     android:layout_margin="8dp"
     card_view:cardCornerRadius="12dp"
     card_view:cardElevation="5dp"
-    android:foreground="?attr/selectableItemBackground"
-    card_view:cardUseCompatPadding="true">
+    card_view:cardUseCompatPadding="true"
+    android:foreground="?attr/selectableItemBackground">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -55,19 +55,17 @@
                 android:layout_height="wrap_content" />
 
             <Button
-                android:id="@+id/btn_detail"
+                android:id="@+id/btnDetail"
                 android:text="View more"
                 android:textSize="12sp"
                 android:textColor="#FFFFFF"
                 android:backgroundTint="#B7192C"
-                android:layout_gravity="end"
-                android:paddingHorizontal="16dp"
                 android:layout_marginTop="8dp"
+                android:layout_gravity="end"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
         </LinearLayout>
 
     </LinearLayout>
-
 </androidx.cardview.widget.CardView>

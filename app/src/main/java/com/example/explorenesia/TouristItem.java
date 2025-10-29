@@ -1,6 +1,5 @@
 package com.example.explorenesia;
 
-import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -47,6 +46,8 @@ public class TouristItem extends RecyclerView.Adapter<TouristItem.ViewHolder> im
             intent.putExtra("location", tourist.getLocation());
             intent.putExtra("description", tourist.getDesc());
             intent.putExtra("pict", tourist.getPict());
+            intent.putExtra("maps", tourist.getMaps());
+            //context.startActivity(intent);
             holder.itemView.getContext().startActivity(intent);
         });
     }
@@ -93,7 +94,7 @@ public class TouristItem extends RecyclerView.Adapter<TouristItem.ViewHolder> im
     public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView name, location, desc;
         ImageView pict;
-        Button btn_detail;
+        Button btn_detail, btn_map;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -101,7 +102,8 @@ public class TouristItem extends RecyclerView.Adapter<TouristItem.ViewHolder> im
             location = itemView.findViewById(R.id.tourist_location);
             desc = itemView.findViewById(R.id.tourist_desc);
             pict = itemView.findViewById(R.id.tourist_pict);
-            btn_detail = itemView.findViewById(R.id.btn_detail);
+            btn_detail = itemView.findViewById(R.id.btnDetail);
+            btn_map = itemView.findViewById(R.id.btnMap);
         }
     }
 }
