@@ -9,6 +9,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <Button
+            android:id="@+id/btnBack"
+            android:text="Back"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:backgroundTint="#B7192C"
+            android:layout_marginBottom="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
         <ImageView
             android:id="@+id/ivPict"
             android:layout_width="match_parent"
@@ -22,7 +32,7 @@
         <TextView
             android:id="@+id/tvName"
             android:textColor="#000000"
-            android:textSize="22sp"
+            android:textSize="24sp"
             android:textStyle="bold"
             android:layout_marginTop="12dp"
             android:layout_width="match_parent"
@@ -30,16 +40,48 @@
 
         <TextView
             android:id="@+id/tvLocation"
-            android:textSize="16sp"
-            android:textColor="#555"
+            android:textSize="18sp"
+            android:textColor="#B7192C"
+            android:drawableStart="@drawable/ic_location"
             android:layout_marginTop="8dp"
+            android:drawablePadding="6dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:drawablePadding="6dp"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RatingBar
+                android:id="@+id/tvRating"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:progressTint="#FFD700"
+                android:rating="4.5"
+                android:scaleX="0.9"
+                android:scaleY="0.9" />
+
+<!--            <TextView-->
+<!--                android:id="@+id/tvRatingValue"-->
+<!--                android:text="4.5"-->
+<!--                android:textSize="14sp"-->
+<!--                android:textColor="#FFD700"-->
+<!--                android:layout_marginStart="6dp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content" />-->
+        </LinearLayout>
 
         <TextView
             android:id="@+id/tvDesc"
             android:textColor="#555"
-            android:textSize="16sp"
+            android:textSize="18sp"
             android:layout_marginTop="12dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
@@ -52,14 +94,14 @@
             android:layout_marginTop="6dp"
             android:layout_margin="6dp">
 
-            <Button
-                android:id="@+id/btnBack"
-                android:text="Back"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                android:backgroundTint="#B7192C"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+<!--            <Button-->
+<!--                android:id="@+id/btnBack"-->
+<!--                android:text="Back"-->
+<!--                android:textColor="#FFFFFF"-->
+<!--                android:textStyle="bold"-->
+<!--                android:backgroundTint="#B7192C"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content" />-->
 
             <Button
                 android:id="@+id/btnMap"

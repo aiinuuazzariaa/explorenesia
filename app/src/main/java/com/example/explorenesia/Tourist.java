@@ -1,5 +1,7 @@
 package com.example.explorenesia;
 
+import android.os.Bundle;
+
 public class Tourist {
     private String name;
     private String location;
@@ -23,5 +25,5 @@ public class Tourist {
     public String getDesc() { return desc; }
     public int getPict() { return pict; }
     public String getMaps() { return maps; }
-    public float getRating() {return rating;}
+    public float getRating() { return rating; }
 }

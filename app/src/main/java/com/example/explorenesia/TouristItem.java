@@ -50,6 +50,8 @@ public class TouristItem extends RecyclerView.Adapter<TouristItem.ViewHolder> im
             intent.putExtra("description", tourist.getDesc());
             intent.putExtra("pict", tourist.getPict());
             intent.putExtra("maps", tourist.getMaps());
+            intent.putExtra("rating", tourist.getRating());
+            intent.putExtra("rating_value", tourist.getRating());
             holder.itemView.getContext().startActivity(intent);
         });
     }
